@@ -1,4 +1,4 @@
-# Transformación XML + XSL >> HTML, en Visual Studio 2019
+# Transformación XML + XSL >> HTML, en Visual Studio 2017
 
 <table>
   <tr><td align=center><img src=xml.png>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=xsl.png></td></tr>
