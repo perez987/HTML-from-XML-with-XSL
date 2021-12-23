@@ -1,7 +1,7 @@
 # Transformación XML + XSL >> HTML, en Visual Studio 2017
 
 <table>
-  <tr><td align=center><img src=xml.png>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=xsl.png></td></tr>
+  <tr><td align=center><img src=img/xml.png>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=img/xsl.png></td></tr>
   <tr><td><b>Convertir un documento XML en un documento HTML con formato y diseño definidos en una hoja de estilos XSL, utilizando Visual Studio 2017 y lenguaje Visual Basic .NET</b></td></tr>
 </table>  
 
@@ -183,7 +183,7 @@ En este ejercicio se van a utilizar 2 documentos: _12empresas.xml_ y _12empresas
 
 Se obtiene el archivo _12empresas.html_ que contiene los mismos datos que el archivo XML pero formateados según el archivo XSL.
 
-![12empresas.html](xml_xsl-2.jpg?raw=true)
+![12empresas.html](img/xml_xsl-2.jpg?raw=true)
 
 ### Variables con las rutas a los archivos
 
