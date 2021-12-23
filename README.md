@@ -15,7 +15,7 @@ En este ejercicio se ha creado una hoja de estilos XSL en la que se ha definido 
 
 ### Clase XslCompiledTransform del espacio de nombres System.Xml.Xsl
 
-En esta clase disponemos de 2 métodos sobrecargados (pueden tener el mismo nombre pero llevando argumentos diferentes, realmente actúan como métodos distintos), XslCompiledTransform.Load y XslCompiledTransform.Transform, que funcionan de esta manera:
+En esta clase disponemos de 2 métodos sobrecargados, XslCompiledTransform.Load y XslCompiledTransform.Transform, que funcionan de esta manera:
 
 * `Load` carga y compila la hoja de estilos que va a ser utilizada usando el documento XSL como parámetro único
 * `Transform` ejecuta la transformación usando el documento XML (parámetro 1) y creando el documento HTML (parámetro 2).
@@ -27,7 +27,7 @@ xslt.Transform(Rutaxmlt, Rutahtml)
 'ejecuta la transformación usando el documento XML del parámetro 1 creando el documento HTML del parámetro 2
 ```
 
-En este ejercicio se van a utilizar 2 documentos: _12empresas.xml_ y _12empresas.xs_ para obtener por código otro documento _12empresas.html_.
+En este ejercicio se van a utilizar 2 documentos: _12empresas.xml_ y _12empresas.xsl_ para obtener por código otro documento _12empresas.html_.
 
 ### 12empresas.xml
 
@@ -183,4 +183,99 @@ En este ejercicio se van a utilizar 2 documentos: _12empresas.xml_ y _12empresas
 
 Se obtiene el archivo _12empresas.html_ que contiene los mismos datos que el archivo XML pero formateados según el archivo XSL.
 
-![12empresas.html]()
+![12empresas.html](xml_xsl-2.jpg?raw=true)
+
+### Variables con las rutas a los archivos
+
+Se crean unas variables de cadena que obtienen las rutas a los archivos utilizando Server.MapPath que devuelve la ruta física que se corresponde con la ruta virtual especificada.
+
+```vbnet
+Private Rutaxmlt As String = Server.MapPath("/") + "12empresas.xml"
+Private Rutaxslt As String = Server.MapPath("/") + "12empresas.xsl"
+Private Rutahtml As String = Server.MapPath("/") + "12empresas.html"
+```
+
+Estas rutas se podrían obtener de varias maneras diferentes, aquí sólo comento otra que es algo más compleja usando _Combine_ de -FileInfo_ que combina la ruta definida en _Server.MapPath_ con el nombre del archivo.
+
+```vbnet
+Private Rutaxmlt As String = New System.IO.FileInfo(System.IO.Path.Combine(Server.MapPath("/"), "12empresas.xml")).FullName
+Private Rutaxslt As String = New System.IO.FileInfo(System.IO.Path.Combine(Server.MapPath("/"), "12empresas.xsl")).FullName
+Private Rutahtml As String = New System.IO.FileInfo(System.IO.Path.Combine(Server.MapPath("/"), "12empresas.html")).FullName
+```
+
+Con ellas se programa el método que transforma el archivo XML en HTML, lo tienes en el primer bloque de código del articulo.
+
+### Hoja de estilos XSL
+
+Observa que en este archivo se mezclan lenguaje XML y HTML. Por ejemplo, se usan etiquetas y atributos HTML para diseñar la presentación de la página web.
+
+```html
+<table border="1" cellpadding="4" cellspacing="4" style="font-family: Verdana; font-size: 10pt;">
+            <tr bgcolor="lightgrey">
+              <td align="left">
+                <b>
+                  <font color="black">Id</font>
+                </b>
+              </td>
+			  <td>
+                <b>
+                  <font color="black">Nombre de la empresa</font>
+                </b>
+              </td>
+              <td width="100">
+                <b>
+                  <font color="black">Teléfono</font>
+                </b>
+              </td>
+              <td width="100">
+                <b>
+                  <font color="black">Teléfono</font>
+                </b>
+              </td>
+            </tr>
+```
+
+Junto con lenguaje XML que maneja los datos. Aquí se usan bucles _for-each_ para iterar por los elementos del archivo XML y el comando _sort_ para ordenar los datos. La construcción _<xsl:value-of select="Id">_ conecta con los valores del elemento del mismo nombre del archivo XML.
+
+Junto con lenguaje XML que maneja los datos. Aquí se usan bucles _for-each_ para iterar por los elementos del archivo XML y el comando _sort_ para ordenar los datos. La construcción _<xsl:value-of select="Id">_ conecta con los valores del elemento del mismo nombre del archivo XML.
+
+```xml
+        <xsl:for-each select="Agenda/Contactos">
+              <xsl:sort select="Nombre" order="ascending"></xsl:sort>
+              <tr bgcolor="white">
+                <td align="right">
+                  <font color="black">
+                    <xsl:value-of select="Id"></xsl:value-of>
+                  </font>
+                </td>
+                <td>
+                  <font color="black">
+                    <xsl:value-of select="Nombre"></xsl:value-of>
+                  </font>
+                </td>
+                <td>
+                  <font color="black">
+                    <xsl:value-of select="Telefono1"></xsl:value-of>
+                  </font>
+                </td>
+                <td>
+                  <font color="black">
+                    <xsl:value-of select="Telefono2"></xsl:value-of>
+                  </font>
+                </td>
+              </tr>
+            </xsl:for-each>
+```
+
+### Abrir archivos con _System.Diagnostics.Process.Start_
+
+Como ejercicio complementario se han creado unos botones en la página _aspx_ para abrir cada uno de los 3 archivos que se usan, el XML origen de los datos, el XSL con las normas de diseño y el VB con el código Visual Basic .NET. Para abrir los archivos se usa _System.Diagnostics.Process.Start_ que inicia un proceso nuevo con el nombre de un archivo o una aplicación:
+
+* si lleva 2 parámetros, el primero es el nombre del programa y el segundo el nombre del archivo que se desea abrir
+* si lleva sólo un parámetro, es el nombre del archivo y en este caso lo abre con el programa que Windows tenga asociado.
+
+```vbnet
+System.Diagnostics.Process.Start(Rutavb) 'abre el archivo con el programa asociado de Windows
+System.Diagnostics.Process.Start("Notepad.exe", Rutavb) 'abre el archivo en Bloc de Notas
+System.Diagnostics.Process.Start("IExplore.exe", Rutavb) 'abre el archivo en Internet Explorer
+```
