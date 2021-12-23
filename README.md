@@ -27,7 +27,7 @@ xslt.Transform(Rutaxmlt, Rutahtml)
 'ejecuta la transformación usando el documento XML del parámetro 1 creando el documento HTML del parámetro 2
 ```
 
-En este ejercicio se van a utilizar 2 documentos: _12empresas.xml_ y _12empresas.xsl_ para obtener por código otro documento _12empresas.html_.
+En este ejercicio se van a utilizar 2 documentos: _12empresas.xml_ y _12empresas.xsl_ para obtener por código un tercer documento _12empresas.html_.
 
 ### 12empresas.xml
 
