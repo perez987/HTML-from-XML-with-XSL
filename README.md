@@ -217,7 +217,7 @@ Observa que en este archivo se mezclan lenguaje XML y HTML. Por ejemplo, se usan
                   <font color="black">Id</font>
                 </b>
               </td>
-			  <td>
+		<td>
                 <b>
                   <font color="black">Nombre de la empresa</font>
                 </b>
