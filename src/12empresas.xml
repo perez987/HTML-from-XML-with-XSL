@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Agenda>
+  <Contactos>
+    <Id>1</Id>
+    <Nombre>Case Corp.</Nombre>
+    <Telefono1>923659854</Telefono1>
+    <Telefono2>169852985</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>2</Id>
+    <Nombre>Data General Corp.</Nombre>
+    <Telefono1>902365458</Telefono1>
+    <Telefono2>223697120</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>3</Id>
+    <Nombre>Eastman Kodak Co.</Nombre>
+    <Telefono1>933696369</Telefono1>
+    <Telefono2>258623589</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>4</Id>
+    <Nombre>Eaton Corp.</Nombre>
+    <Telefono1>965235898</Telefono1>
+    <Telefono2>001544444</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>5</Id>
+    <Nombre>Gateway Inc.</Nombre>
+    <Telefono1>900326596</Telefono1>
+    <Telefono2>001544444</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>6</Id>
+    <Nombre>Paine Webber Group Inc.</Nombre>
+    <Telefono1>932145785</Telefono1>
+    <Telefono2>214585258</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>7</Id>
+    <Nombre>Parker Hannifin Corp.</Nombre>
+    <Telefono1>944444102</Telefono1>
+    <Telefono2>224465668</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>8</Id>
+    <Nombre>Reynolds Metals Co.</Nombre>
+    <Telefono1>923659854</Telefono1>
+    <Telefono2>221995416</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>9</Id>
+    <Nombre>Tenet Healthcare Corp.</Nombre>
+    <Telefono1>944444102</Telefono1>
+    <Telefono2>258623589</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>10</Id>
+    <Nombre>UniGroup Inc.</Nombre>
+    <Telefono1>932665447</Telefono1>
+    <Telefono2>155584598</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>11</Id>
+    <Nombre>Union Pacific Resources Group Inc.</Nombre>
+    <Telefono1>965235898</Telefono1>
+    <Telefono2>002587455</Telefono2>
+  </Contactos>
+  <Contactos>
+    <Id>12</Id>
+    <Nombre>Xerox Corp.</Nombre>
+    <Telefono1>932569857</Telefono1>
+    <Telefono2>224465668</Telefono2>
+  </Contactos>
+</Agenda>
