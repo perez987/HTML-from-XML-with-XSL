@@ -9,7 +9,6 @@
 XML documents are plain text and their basic presentation lacks layout or formatting options. When opening it, we always see text structured according to the rules of the XML language. Sometimes you need to use XML data as source but present it in a certain way, for example for a mobile device or for the web. In these cases we can use XSL style sheets.
 
 XSL (*extensible stylesheet language*) contains rules that allow extracting and formatting information from an XML file to be presented to the user. Within the XSL language exists XSLT (*XSL transformation*) used to transform XML documents. XSLT defines how an XML document will be converted into another type of document that can be of several types (PDF, HTML, JAVA, etc.) although the most common is HTML to be viewed in a Web browser.
-To achieve this, the XML document must be related to an XSL stylesheet in which the rules for transforming one type of document into another are detailed, these rules are analysed by the XSL processor and the resulting output is an HTML document formatted according to those rules.
 In this exercise, an XSL stylesheet has been created in which it has been defined how to present the XML data source in a web page that can be printed by the user.
 
 ### XslCompiledTransform class of System.Xml.Xsl namespace
