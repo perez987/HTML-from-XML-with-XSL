@@ -268,10 +268,10 @@ Along with XML language that handles the data. Here _for-each_ loops are used to
 As a complementary exercise, buttons have been created on the _aspx_ page to open each of the 3 used files, the XML source of the data, the XSL with the design  and the VB with the Visual Basic .NET code. To open the files,  _System.Diagnostics.Process.Start_ is ised, it starts a new process with the name of a file or an application:
 
 * if it has 2 parameters, the first is the name of the program and the second the name of the file you want to open
-* if it has only one parameter, it is the name of the file and, in this case, opens it with the program associated in Windows.
+* if it has only one parameter, it is the name of the file and, in this case, opens it with the associated program in Windows.
 
 ```vbnet
-System.Diagnostics.Process.Start(Rutavb) 'abre el archivo con el programa asociado de Windows
-System.Diagnostics.Process.Start("Notepad.exe", Rutavb) 'abre el archivo en Bloc de Notas
-System.Diagnostics.Process.Start("IExplore.exe", Rutavb) 'abre el archivo en Internet Explorer
+System.Diagnostics.Process.Start(Rutavb) 'opens the file with the associated program in Windows
+System.Diagnostics.Process.Start("Notepad.exe", Rutavb) 'opens the file with Notepad
+System.Diagnostics.Process.Start("IExplore.exe", Rutavb) 'opens the file with Internet Explorer
 ```
