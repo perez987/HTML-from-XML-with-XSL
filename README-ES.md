@@ -5,7 +5,7 @@
   <tr><td><b>Convertir un documento XML en un documento HTML con formato y diseño definidos en una hoja de estilos XSL, utilizando Visual Studio 2017 y lenguaje Visual Basic .NET</b></td></tr>
 </table>
 
-### [Versión en inglés](README-EN.md)
+### [Versión en inglés](README.md)
 
 ### Introducción
 
