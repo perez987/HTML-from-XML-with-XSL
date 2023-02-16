@@ -3,7 +3,9 @@
 <table>
 	<tr><td align=center><img src=img/xml.png>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src=img/xsl.png></td></tr>
 	<tr><td><b>How to convert an XML document into an HTML document with formatting and layout defined in an XSL stylesheet, using Visual Studio 2017 and Visual Basic .NET language</b></td></tr>
-</table>  
+</table>
+
+### [Spanish version](README-ES.md)
 
 ### Introduction
 
